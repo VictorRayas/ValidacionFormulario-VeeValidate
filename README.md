@@ -6,19 +6,24 @@ Para instalar esta libreria utiliza el siguiente comando
 npm install vee-validate@2 --save
 ```
 
+## En el Archivo main.js
 
-## Recommended IDE Setup
+Se debe de importar 
+```sh
+import VeeValidate , { Validator }  from 'vee-validate'
+```
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+## Para cambiar el idioma de los mensajes debes de usar Validator y localize de esta mamera.
 
 ```sh
-npm install
+Validator.localize('es', {
+  messages: {
+    alpha: () => 'Este campo solo puede contener letras.',
+    alpha_spaces: 'Solo acepta letras y espacios',
+    min : (field,[num])=>`Debe de contener ${num} caracteres como minimo`,
+    included:"Debes de selccionar una opcion (Masculino/Femenino)"
+  }
+});
 ```
 
 ### Compile and Hot-Reload for Development
