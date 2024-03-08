@@ -48,3 +48,18 @@ Existen  muchas  reglas de validación listas para usar y todas están localizad
 <input v-validate="'alpha'" name="alpha_field" type="text">
 <span style="color: brown;">{{ errors.first('alpha_field') }}</span>
 ```
+### funcion validate()
+Para controlar los eventos cada que se manden el formulario, se debe de colocar el siguiente metodo validate(), este metodo muestra todas las alertas de los campos que falten por llenar. Con ello puedes controlar el envio de información aplicando una estructura if.
+
+### Ejemplo de Uso
+
+ onSubmit() {
+      this.$validator.validate().then(valid => {
+        if (!valid) {
+         console.log('Falta Acompletar campos')
+        }else{
+          console.log('Todo corecto')
+    //Resto de código a ejecutar
+        }
+      });
+    }
