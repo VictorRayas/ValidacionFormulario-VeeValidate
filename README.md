@@ -1,4 +1,4 @@
-# Validacion de Formularios con Vee-Validate
+# Validación de Formularios con Vee-Validate
 
 Para instalar esta libreria utiliza el siguiente comando
 
@@ -13,7 +13,7 @@ Se debe de importar
 import VeeValidate , { Validator }  from 'vee-validate'
 ```
 
-## Para cambiar el idioma de los mensajes debes de usar Validator y localize de esta mamera.
+## Para cambiar el idioma de los mensajes debes de usar Validator y localize() de esta mamera.
 
 ```sh
 Validator.localize('es', {
@@ -38,7 +38,7 @@ Existen  muchas  reglas de validación listas para usar y todas están localizad
 **número_alfa:** El campo bajo validación puede contener caracteres alfabéticos o números.
 
 
-### implentación
+### Implementación
 
 ```sh
 <input v-validate="'alpha_dash'" name="alpha_dash_field" type="text">
