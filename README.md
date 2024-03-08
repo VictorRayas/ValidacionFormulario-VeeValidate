@@ -28,7 +28,7 @@ Validator.localize('es', {
 
 ## Implementación 
 
-Para cada campo debes de implentar la siguiente directiva(v-validate) personalidaza a cada campo del formulario, para que vee-validate controle la validación.
+Para cada campo del formulario  debes de implementar la siguiente directiva personalidaza(v-validate) para que vee-validate controle la validación.
 Existen  muchas  reglas de validación listas para usar y todas están localizadas y cubren la mayoría de las necesidades de validación, solo con usar el nombre de la rgla, por ejemplo:
 
 **alfa:** El campo bajo validación solo puede contener caracteres alfabéticos.
@@ -38,8 +38,13 @@ Existen  muchas  reglas de validación listas para usar y todas están localizad
 **número_alfa:** El campo bajo validación puede contener caracteres alfabéticos o números.
 
 
-### Compile and Minify for Production
+### Ejemplo de Uso
 
 ```sh
-npm run build
+<input v-validate="'alpha_dash'" name="alpha_dash_field" type="text">
+<span style="color: brown;">{{ errors.first('alpha_dash_field') }}</span>
+```
+```sh
+<input v-validate="'alpha'" name="alpha_field" type="text">
+<span style="color: brown;">{{ errors.first('alpha_field') }}</span>
 ```
