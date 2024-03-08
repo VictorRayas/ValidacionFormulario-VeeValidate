@@ -52,7 +52,7 @@ Existen  muchas  reglas de validación listas para usar y todas están localizad
 Para controlar los eventos cada que se manden el formulario, se debe de colocar el siguiente metodo validate(), este metodo muestra todas las alertas de los campos que falten por llenar. Con ello puedes controlar el envio de información aplicando una estructura if.
 
 ### Ejemplo de Uso
-
+```sh
  onSubmit() {
       this.$validator.validate().then(valid => {
         if (!valid) {
@@ -63,3 +63,4 @@ Para controlar los eventos cada que se manden el formulario, se debe de colocar 
         }
       });
     }
+```
