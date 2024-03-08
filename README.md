@@ -1,6 +1,11 @@
-# validacionFormulario
+# Validacion de Formularios con Vee-Validate
 
-This template should help get you started developing with Vue 3 in Vite.
+Para instalar esta libreria utiliza el siguiente comando
+
+```sh
+npm install vee-validate@2 --save
+```
+
 
 ## Recommended IDE Setup
 
