@@ -26,7 +26,7 @@ Validator.localize('es', {
 });
 ```
 
-## Implementación 
+## Introducción 
 
 Para cada campo del formulario  debes de implementar la siguiente directiva personalidaza(v-validate) para que vee-validate controle la validación.
 Existen  muchas  reglas de validación listas para usar y todas están localizadas y cubren la mayoría de las necesidades de validación, solo con usar el nombre de la rgla, por ejemplo:
@@ -38,7 +38,7 @@ Existen  muchas  reglas de validación listas para usar y todas están localizad
 **número_alfa:** El campo bajo validación puede contener caracteres alfabéticos o números.
 
 
-### Ejemplo de Uso
+### implentación
 
 ```sh
 <input v-validate="'alpha_dash'" name="alpha_dash_field" type="text">
@@ -48,10 +48,10 @@ Existen  muchas  reglas de validación listas para usar y todas están localizad
 <input v-validate="'alpha'" name="alpha_field" type="text">
 <span style="color: brown;">{{ errors.first('alpha_field') }}</span>
 ```
-### funcion validate()
+### Funcion validate()
 Para controlar los eventos cada que se manden el formulario, se debe de colocar el siguiente metodo validate(), este metodo muestra todas las alertas de los campos que falten por llenar. Con ello puedes controlar el envio de información aplicando una estructura if.
 
-### Ejemplo de Uso
+### Implementación
 ```sh
  onSubmit() {
       this.$validator.validate().then(valid => {
