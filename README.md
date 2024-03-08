@@ -32,7 +32,9 @@ Para cada campo debes de implentar la siguiente directiva(v-validate) personalid
 Existen  muchas  reglas de validación listas para usar y todas están localizadas y cubren la mayoría de las necesidades de validación, solo con usar el nombre de la rgla, por ejemplo:
 
 **alfa:** El campo bajo validación solo puede contener caracteres alfabéticos.
+
 **alfa_dash:** El campo bajo validación puede contener caracteres alfabéticos, números, guiones o guiones bajos.
+
 **número_alfa:** El campo bajo validación puede contener caracteres alfabéticos o números.
 
 
